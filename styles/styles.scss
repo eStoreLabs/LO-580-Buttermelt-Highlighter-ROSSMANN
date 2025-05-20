@@ -2,8 +2,9 @@
 
 // set up variables
 
-$text-main: "font-name", sans-serif;
-$text-secondary: "font-name", sans-serif;
+$text-main: "Montserrat", sans-serif;
+$text-secondary: "Barlow Condensed", sans-serif;
+$text-accent: "Caveat", cursive;
 
 $fw-regular: 400;
 $fw-bold: 700;
@@ -17,10 +18,10 @@ $px-L: 24px;
 $px-XL: 32px;
 $px-XXL: 40px;
 
-$color-main: #0d1116;
-$color-bg: #f6f8fa;
-$color-accent: #f6a255;
-$color-accent-2: #69a7dd;
+$color-main: #000000;
+$color-bg: #ffffff;
+$color-accent-1: #541c89;
+$color-accent-2: #75c7ca;
 
 $media-breakpoint-sm: 576px;
 $media-breakpoint-md: 768px;
@@ -32,8 +33,8 @@ $media-breakpoint-xl: 1200px;
   font-size: $fs-base;
   font-weight: $fw-regular;
   line-height: 1.2;
-  color: $color-main;
-  background-color: $color-bg;
+  color: $color-bg;
+  background-color: $color-accent-1;
   max-width: 990px; //adjust, based on https://github.com/eStoreLabs/READ-ME/blob/main/DEVELOPMENT_GUIDELINES_FOR_GENERICS.md#2-styles
   margin: auto;
 
@@ -68,38 +69,6 @@ $media-breakpoint-xl: 1200px;
     font-weight: $fw-bold;
     text-align: center;
     margin-block: $px-M;
-  }
-
-  .es-kv {
-    background-color: $color-bg;
-    &__img {
-      &--desktop {
-        display: none;
-      }
-      @media (min-width: $media-breakpoint-md) {
-        &--mobile {
-          display: none;
-        }
-        &--desktop {
-          display: block;
-        }
-      }
-    }
-  }
-
-  .es-section {
-    margin-block: $px-M;
-
-    &__button {
-      background-color: $color-accent;
-      padding: $px-S $px-M;
-      cursor: pointer;
-      margin: auto;
-
-      @media (min-width: $media-breakpoint-md) {
-        background-color: $color-accent-2;
-      }
-    }
   }
 
   // other sections
