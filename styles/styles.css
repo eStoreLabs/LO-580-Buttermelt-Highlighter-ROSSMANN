@@ -32,8 +32,116 @@
 }
 #es-rc #es-rc-content .es-section-title {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 32px;
+  font-size: 48px;
   font-weight: 700;
   text-align: center;
-  margin-block: 16px;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-section-title {
+    font-size: 32px;
+  }
+}
+#es-rc #es-rc-content .es-kv__left {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+#es-rc #es-rc-content .es-kv__logo {
+  max-width: 350px;
+}
+#es-rc #es-rc-content .es-kv__description {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 19.2px;
+  text-align: center;
+}
+#es-rc #es-rc-content .es-kv__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#es-rc #es-rc-content .es-kv__item--check {
+  max-width: 30px;
+  margin: unset;
+}
+#es-rc #es-rc-content .es-kv__item--desc {
+  font-family: "Caveat", cursive;
+  font-size: 32px;
+}
+#es-rc #es-rc-content .es-kv__12h {
+  margin: 32px 32px -32px 32px;
+}
+#es-rc #es-rc-content .es-kv__12h img {
+  margin: unset;
+  max-width: 100px;
+}
+#es-rc #es-rc-content .es-kv__photo {
+  padding: 24px;
+}
+@media (min-width: 576px) {
+  #es-rc #es-rc-content .es-kv__right {
+    display: flex;
+    padding: 24px;
+    gap: 24px;
+    position: relative;
+  }
+  #es-rc #es-rc-content .es-kv__12h {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 16px;
+  }
+  #es-rc #es-rc-content .es-kv__photo {
+    padding: unset;
+  }
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-kv {
+    display: flex;
+  }
+  #es-rc #es-rc-content .es-kv__left {
+    width: 40%;
+    margin-right: -1%;
+  }
+  #es-rc #es-rc-content .es-kv__right {
+    width: 60%;
+    padding: unset;
+  }
+  #es-rc #es-rc-content .es-kv__logo {
+    max-width: 200px;
+  }
+  #es-rc #es-rc-content .es-kv__description {
+    font-size: 16px;
+    text-wrap: balance;
+  }
+  #es-rc #es-rc-content .es-kv__item--desc {
+    font-size: 25.6px;
+    min-width: -moz-max-content;
+    min-width: max-content;
+  }
+  #es-rc #es-rc-content .es-kv__12h {
+    bottom: 10%;
+    margin: 0;
+    left: 4%;
+  }
+  #es-rc #es-rc-content .es-kv__12h img {
+    max-width: 75px;
+  }
+  #es-rc #es-rc-content .es-kv__photo {
+    padding: 24px 24px 0 0;
+  }
+}
+@media (min-width: 850px) {
+  #es-rc #es-rc-content .es-kv__12h {
+    bottom: 6%;
+    left: 2%;
+  }
+}
+@media (min-width: 860px) {
+  #es-rc #es-rc-content .es-kv__12h {
+    left: -2%;
+  }
 }/*# sourceMappingURL=styles.css.map */

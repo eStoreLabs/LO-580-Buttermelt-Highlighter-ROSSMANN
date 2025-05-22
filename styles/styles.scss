@@ -8,9 +8,12 @@ $text-accent: "Caveat", cursive;
 
 $fw-regular: 400;
 $fw-bold: 700;
+$fw-extrabold: 800;
 
 $fs-base: 16px;
-$fs-header: 32px;
+$fs-header-sm: 48px;
+$fs-header-md: 32px;
+$fs-header-lg: 60px;
 
 $px-S: 8px;
 $px-M: 16px;
@@ -35,7 +38,7 @@ $media-breakpoint-xl: 1200px;
   line-height: 1.2;
   color: $color-bg;
   background-color: $color-accent-1;
-  max-width: 990px; //adjust, based on https://github.com/eStoreLabs/READ-ME/blob/main/DEVELOPMENT_GUIDELINES_FOR_GENERICS.md#2-styles
+  max-width: 990px;
   margin: auto;
 
   ::selection {
@@ -65,11 +68,117 @@ $media-breakpoint-xl: 1200px;
 
   .es-section-title {
     font-family: $text-secondary;
-    font-size: $fs-header;
+    font-size: $fs-header-sm;
     font-weight: $fw-bold;
     text-align: center;
-    margin-block: $px-M;
+    text-transform: uppercase;
+    @media (min-width: $media-breakpoint-md) {
+      font-size: $fs-header-md;
+    }
   }
 
-  // other sections
+  .es-kv {
+    &__left {
+      padding: $px-L;
+      display: flex;
+      flex-direction: column;
+      gap: $px-L;
+      align-items: center;
+    }
+    &__logo {
+      max-width: 350px;
+    }
+    &__description {
+      text-transform: uppercase;
+      font-weight: $fw-extrabold;
+      font-size: calc(1.2 * $fs-base);
+      text-align: center;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: $px-S;
+      &--check {
+        max-width: 30px;
+        margin: unset;
+      }
+      &--desc {
+        font-family: $text-accent;
+        font-size: calc(2 * $fs-base);
+      }
+    }
+    &__12h {
+      margin: 32px 32px -32px 32px;
+      img {
+        margin: unset;
+        max-width: 100px;
+      }
+    }
+    &__photo {
+      padding: $px-L;
+    }
+    @media (min-width: $media-breakpoint-sm) {
+      &__right {
+        display: flex;
+        padding: $px-L;
+        gap: $px-L;
+        position: relative;
+      }
+      &__12h {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: $px-M;
+      }
+      &__photo {
+        padding: unset;
+      }
+    }
+    @media (min-width: $media-breakpoint-md) {
+      display: flex;
+      &__left {
+        width: 40%;
+        margin-right: -1%;
+      }
+      &__right {
+        width: 60%;
+        padding: unset;
+      }
+      &__logo {
+        max-width: 200px;
+      }
+      &__description {
+        font-size: $fs-base;
+        text-wrap: balance;
+      }
+      &__item {
+        &--desc {
+          font-size: calc(1.6 * $fs-base);
+          min-width: max-content;
+        }
+      }
+      &__12h {
+        bottom: 10%;
+        margin: 0;
+        left: 4%;
+        img {
+          max-width: 75px;
+        }
+      }
+      &__photo {
+        padding: $px-L $px-L 0 0;
+      }
+    }
+    @media (min-width: 850px) {
+      &__12h {
+        bottom: 6%;
+        left: 2%;
+      }
+    }
+    @media (min-width: 860px) {
+      &__12h {
+        left: -2%;
+      }
+    }
+  }
 }
