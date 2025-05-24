@@ -33,7 +33,7 @@
 #es-rc #es-rc-content .es-section-title {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
   text-transform: uppercase;
 }
@@ -41,6 +41,13 @@
   #es-rc #es-rc-content .es-section-title {
     font-size: 32px;
   }
+}
+#es-rc #es-rc-content .es-background-text {
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #es-rc #es-rc-content .es-kv__left {
   padding: 24px;
@@ -54,7 +61,7 @@
 }
 #es-rc #es-rc-content .es-kv__description {
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 19.2px;
   text-align: center;
 }
@@ -143,5 +150,102 @@
 @media (min-width: 860px) {
   #es-rc #es-rc-content .es-kv__12h {
     left: -2%;
+  }
+}
+#es-rc #es-rc-content .es-colors .es-section-title {
+  margin-block: 64px;
+}
+#es-rc #es-rc-content .es-colors__slide--2 {
+  padding: 24px;
+}
+#es-rc #es-rc-content .es-colors__ctn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#es-rc #es-rc-content .es-colors__ctn--2 {
+  gap: 24px;
+}
+#es-rc #es-rc-content .es-colors__item {
+  flex: 1 1 0;
+  min-width: 140px;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 8px;
+}
+#es-rc #es-rc-content .es-colors__item--image {
+  width: 100%;
+}
+#es-rc #es-rc-content .es-colors__item--number {
+  font-size: 32px;
+  font-weight: 900;
+}
+#es-rc #es-rc-content .es-colors__item--name {
+  font-size: 32px;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  color: #000000;
+  font-weight: 700;
+  text-wrap: balance;
+}
+#es-rc #es-rc-content .es-colors__pack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+#es-rc #es-rc-content .es-colors__pack--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 300px;
+  text-wrap: balance;
+}
+#es-rc #es-rc-content .es-colors__pack--name {
+  font-family: "Caveat", cursive;
+  font-size: 33.6px;
+  font-weight: 700;
+  line-height: 1;
+}
+@media (min-width: 576px) {
+  #es-rc #es-rc-content .es-colors__item {
+    max-width: 33%;
+  }
+  #es-rc #es-rc-content .es-colors__ctn--2 {
+    gap: 32px;
+  }
+  #es-rc #es-rc-content .es-colors__pack {
+    position: relative;
+  }
+  #es-rc #es-rc-content .es-colors__pack--text {
+    position: absolute;
+    bottom: -5%;
+    max-width: 275px;
+  }
+  #es-rc #es-rc-content .es-colors__pack--text--1 {
+    right: 0;
+  }
+  #es-rc #es-rc-content .es-colors__pack--text--2 {
+    left: 0;
+  }
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-colors__item {
+    width: 11%;
+    min-width: unset;
+    max-width: unset;
+  }
+}
+@media (min-width: 992px) {
+  #es-rc #es-rc-content .es-colors__ctn--2 {
+    flex-direction: row;
+  }
+  #es-rc #es-rc-content .es-colors__pack {
+    flex: 1 1 0;
   }
 }/*# sourceMappingURL=styles.css.map */
