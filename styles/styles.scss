@@ -494,4 +494,27 @@ $media-breakpoint-xl: 1200px;
       }
     }
   }
+
+  .es-video {
+    padding: $px-L;
+    &__bg {
+      padding: 2px 2px 0 2px;
+      border-radius: 10px;
+    }
+    &__video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    @media (min-width: $media-breakpoint-sm) {
+      padding: $px-XXL;
+    }
+    @media (min-width: $media-breakpoint-md) {
+      &__bg {
+        width: 80%;
+        margin: auto;
+      }
+    }
+  }
 }
