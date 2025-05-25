@@ -26,6 +26,7 @@ $color-main: #000000;
 $color-bg: #ffffff;
 $color-accent-1: #541c89;
 $color-accent-2: #75c7ca;
+$color-accent-3: #7851a9;
 
 $media-breakpoint-sm: 576px;
 $media-breakpoint-md: 768px;
@@ -73,6 +74,7 @@ $media-breakpoint-xl: 1200px;
     font-weight: $fw-extrabold;
     text-align: center;
     text-transform: uppercase;
+    text-wrap: balance;
     @media (min-width: $media-breakpoint-md) {
       font-size: $fs-header-md;
     }
@@ -232,6 +234,9 @@ $media-breakpoint-xl: 1200px;
         font-weight: $fw-bold;
         text-wrap: balance;
       }
+      &--gradient-box {
+        display: none;
+      }
     }
     &__pack {
       display: flex;
@@ -283,6 +288,52 @@ $media-breakpoint-xl: 1200px;
         width: 11%;
         min-width: unset;
         max-width: unset;
+        &--number {
+          font-size: calc(1.2 * $fs-base);
+        }
+        &--name {
+          font-size: calc(1.1 * $fs-base);
+        }
+        &--box {
+          position: relative;
+        }
+        &--gradient-box {
+          display: block;
+          position: absolute;
+          top: -22px;
+          left: 50%;
+          padding: 1px;
+          width: 93%;
+          transform: translateX(-50%);
+          border-radius: 4px;
+          background: linear-gradient(
+            222deg,
+            rgba(255, 253, 253, 1) 0%,
+            rgba(175, 173, 173, 1) 100%
+          );
+        }
+        &--gradient-inner {
+          background-color: $color-accent-3;
+          padding: 8px 4px;
+          border-radius: 4px;
+          position: relative;
+        }
+        &--gradient-text {
+          font-weight: $fw-bold;
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 60%;
+        }
+        &--gradient-stars {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 82%;
+          height: 82%;
+          margin-block: auto;
+        }
       }
     }
     @media (min-width: $media-breakpoint-lg) {
@@ -293,6 +344,107 @@ $media-breakpoint-xl: 1200px;
       }
       &__pack {
         flex: 1 1 0;
+        &--text {
+          display: grid;
+          grid-template-rows: 70px 1fr;
+        }
+      }
+    }
+  }
+  .es-features {
+    .es-section-title {
+      margin-block: $px-XXXL;
+    }
+    &__ctn {
+      padding-inline: $px-L;
+    }
+    &__left {
+      display: flex;
+      flex-direction: column;
+      gap: $px-L;
+      align-items: center;
+      padding: $px-XL;
+      position: relative;
+      z-index: 0;
+      &--bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        z-index: -1;
+      }
+      &--text {
+        font-family: $text-secondary;
+        text-transform: uppercase;
+        font-weight: $fw-extrabold;
+        font-size: calc(2.2 * $fs-base);
+      }
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      gap: $px-L;
+      align-items: center;
+      padding: $px-XL;
+      &--text {
+        font-family: $text-accent;
+        font-weight: $fw-bold;
+        font-size: calc(2.2 * $fs-base);
+      }
+    }
+    @media (min-width: $media-breakpoint-sm) {
+      &__left {
+        flex-direction: row;
+        justify-content: center;
+        &--bg {
+          top: -39%;
+          left: -24px;
+        }
+      }
+    }
+    @media (min-width: $media-breakpoint-md) {
+      .es-section-title {
+        margin-block: $px-XXL;
+      }
+      &__ctn {
+        display: flex;
+        align-items: center;
+        gap: $px-L;
+        padding-inline: $px-XXL;
+      }
+      &__left {
+        padding: 0;
+        margin-top: -110px;
+        width: 60%;
+        &--image {
+          max-width: 175px;
+        }
+        &--bg {
+          top: -77%;
+          left: -6%;
+          width: 123%;
+        }
+      }
+      &__right {
+        padding: 0;
+        width: 40%;
+        gap: $px-M;
+        &--vegan {
+          max-width: 250px;
+        }
+      }
+    }
+    @media (min-width: $media-breakpoint-lg) {
+      &__left {
+        &--bg {
+          top: -87%;
+          left: -1%;
+          width: 118%;
+        }
       }
     }
   }
