@@ -75,9 +75,7 @@ $media-breakpoint-xl: 1200px;
     text-align: center;
     text-transform: uppercase;
     text-wrap: balance;
-    @media (min-width: $media-breakpoint-md) {
-      font-size: $fs-header-md;
-    }
+    margin-block: $px-XXXL;
   }
 
   .es-background-text {
@@ -89,6 +87,9 @@ $media-breakpoint-xl: 1200px;
   }
 
   .es-kv {
+    .es-section-title {
+      margin-block: 0;
+    }
     &__left {
       padding: $px-L;
       display: flex;
@@ -147,6 +148,9 @@ $media-breakpoint-xl: 1200px;
     }
     @media (min-width: $media-breakpoint-md) {
       display: flex;
+      .es-section-title {
+        font-size: $fs-header-md;
+      }
       &__left {
         width: 40%;
         margin-right: -1%;
@@ -194,9 +198,6 @@ $media-breakpoint-xl: 1200px;
   }
 
   .es-colors {
-    .es-section-title {
-      margin-block: $px-XXXL;
-    }
     &__slide {
       &--2 {
         padding: $px-L;
@@ -351,10 +352,8 @@ $media-breakpoint-xl: 1200px;
       }
     }
   }
+
   .es-features {
-    .es-section-title {
-      margin-block: $px-XXXL;
-    }
     &__ctn {
       padding-inline: $px-L;
     }
@@ -407,9 +406,6 @@ $media-breakpoint-xl: 1200px;
       }
     }
     @media (min-width: $media-breakpoint-md) {
-      .es-section-title {
-        margin-block: $px-XXL;
-      }
       &__ctn {
         display: flex;
         align-items: center;
@@ -418,7 +414,6 @@ $media-breakpoint-xl: 1200px;
       }
       &__left {
         padding: 0;
-        margin-top: -110px;
         width: 60%;
         &--image {
           max-width: 175px;
@@ -444,6 +439,57 @@ $media-breakpoint-xl: 1200px;
           top: -87%;
           left: -1%;
           width: 118%;
+        }
+      }
+    }
+  }
+
+  .es-routine {
+    padding: $px-L;
+    &__ctn {
+      display: flex;
+      flex-direction: column;
+      gap: $px-L;
+      align-items: center;
+    }
+    &__item {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $px-XL;
+      max-width: 230px;
+      &--img {
+        margin-right: -7%;
+      }
+      &--text {
+        text-align: center;
+      }
+      &--name {
+        font-weight: $fw-extrabold;
+        font-size: calc(1.2 * $fs-base);
+        text-transform: uppercase;
+      }
+      &--description {
+        font-family: $text-accent;
+        font-weight: $fw-bold;
+        font-size: calc(2.1 * $fs-base);
+        margin-top: $px-S;
+      }
+    }
+    @media (min-width: $media-breakpoint-md) {
+      &__ctn {
+        flex-direction: row;
+        justify-content: center;
+        gap: unset;
+        align-items: flex-start;
+      }
+      &__item {
+        &--name {
+          font-size: calc(0.8 * $fs-base);
+        }
+        &--description {
+          font-size: calc(1.2 * $fs-base);
         }
       }
     }
