@@ -375,6 +375,67 @@ $transition: all 0.3s ease-in-out;
     }
   }
 
+  .swiper-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+    margin: auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    cursor: pointer;
+    color: $color-bg;
+    position: unset;
+    margin: unset;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after,
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    font-size: 16px;
+  }
+
+  .swiper-pagination {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: unset;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $color-bg;
+  }
+
+  /* Hide Swiper controls on mobile */
+  @media (max-width: 991px) {
+    #esColorsSwiper .swiper-wrapper {
+      display: block !important;
+      transform: none !important;
+      width: 100% !important;
+    }
+
+    #esColorsSwiper .swiper-slide {
+      width: 100% !important;
+      margin-bottom: 2rem;
+      display: block;
+    }
+    .swiper-controls {
+      display: none;
+    }
+  }
+
+  /* Optional spacing when Swiper is disabled on mobile */
+  .swiper-wrapper.swiper-no-swiping {
+    display: block;
+  }
+  .swiper-wrapper.swiper-no-swiping > .swiper-slide {
+    width: 100% !important;
+    margin-bottom: 2rem;
+  }
+
   .es-features {
     &__ctn {
       padding-inline: $px-L;

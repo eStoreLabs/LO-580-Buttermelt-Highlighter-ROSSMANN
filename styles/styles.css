@@ -7,6 +7,8 @@
   background-color: #541c89;
   max-width: 990px;
   margin: auto;
+  /* Hide Swiper controls on mobile */
+  /* Optional spacing when Swiper is disabled on mobile */
 }
 #es-rc #es-rc-content ::-moz-selection {
   background-color: #75c7ca;
@@ -317,6 +319,58 @@
     max-width: 200px;
     margin: auto;
   }
+}
+#es-rc #es-rc-content .swiper-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-min-content;
+  width: min-content;
+  margin: auto;
+}
+#es-rc #es-rc-content .swiper-button-prev,
+#es-rc #es-rc-content .swiper-button-next {
+  cursor: pointer;
+  color: #ffffff;
+  position: unset;
+  margin: unset;
+}
+#es-rc #es-rc-content .swiper-button-prev:after,
+#es-rc #es-rc-content .swiper-rtl .swiper-button-next:after,
+#es-rc #es-rc-content .swiper-button-next:after,
+#es-rc #es-rc-content .swiper-rtl .swiper-button-prev:after {
+  font-size: 16px;
+}
+#es-rc #es-rc-content .swiper-pagination {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: unset;
+}
+#es-rc #es-rc-content .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+@media (max-width: 991px) {
+  #es-rc #es-rc-content #esColorsSwiper .swiper-wrapper {
+    display: block !important;
+    transform: none !important;
+    width: 100% !important;
+  }
+  #es-rc #es-rc-content #esColorsSwiper .swiper-slide {
+    width: 100% !important;
+    margin-bottom: 2rem;
+    display: block;
+  }
+  #es-rc #es-rc-content .swiper-controls {
+    display: none;
+  }
+}
+#es-rc #es-rc-content .swiper-wrapper.swiper-no-swiping {
+  display: block;
+}
+#es-rc #es-rc-content .swiper-wrapper.swiper-no-swiping > .swiper-slide {
+  width: 100% !important;
+  margin-bottom: 2rem;
 }
 #es-rc #es-rc-content .es-features__ctn {
   padding-inline: 24px;
