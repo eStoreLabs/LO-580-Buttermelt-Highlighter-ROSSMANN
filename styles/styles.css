@@ -27,9 +27,6 @@
   display: block;
   margin: 0 auto;
 }
-#es-rc #es-rc-content button {
-  display: block;
-}
 #es-rc #es-rc-content .es-section-title {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 48px;
@@ -178,6 +175,10 @@
 }
 #es-rc #es-rc-content .es-colors__item--image {
   width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+#es-rc #es-rc-content .es-colors__item--image:hover {
+  scale: 1.1;
 }
 #es-rc #es-rc-content .es-colors__item--number {
   font-size: 32px;
@@ -328,6 +329,12 @@
   padding: 32px;
   position: relative;
   z-index: 0;
+}
+#es-rc #es-rc-content .es-features__left--image {
+  transition: all 0.3s ease-in-out;
+}
+#es-rc #es-rc-content .es-features__left--image:hover {
+  scale: 1.05;
 }
 #es-rc #es-rc-content .es-features__left--bg {
   position: absolute;
