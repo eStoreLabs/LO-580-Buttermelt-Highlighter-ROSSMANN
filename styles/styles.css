@@ -31,12 +31,12 @@
 }
 #es-rc #es-rc-content .es-section-title {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
   text-wrap: balance;
-  margin-block: 64px;
+  margin-block: 48px;
 }
 #es-rc #es-rc-content .es-background-text {
   background-size: cover;
@@ -109,7 +109,10 @@
     display: flex;
   }
   #es-rc #es-rc-content .es-kv .es-section-title {
-    font-size: 38px;
+    width: -moz-max-content;
+    width: max-content;
+    text-align: left;
+    align-self: flex-start;
   }
   #es-rc #es-rc-content .es-kv__left {
     width: 40%;
@@ -223,7 +226,7 @@
     max-width: 33%;
   }
   #es-rc #es-rc-content .es-colors__ctn--2 {
-    gap: 64px;
+    gap: 48px;
   }
   #es-rc #es-rc-content .es-colors__pack {
     position: relative;
@@ -292,7 +295,7 @@
 @media (min-width: 992px) {
   #es-rc #es-rc-content .es-colors__ctn--2 {
     flex-direction: row;
-    margin-top: -50px;
+    margin-top: -100px;
     margin-bottom: 50px;
   }
   #es-rc #es-rc-content .es-colors__pack {
@@ -619,7 +622,7 @@
     flex-direction: row;
     gap: 16px;
     justify-content: space-around;
-    margin-block: 64px;
+    margin-block: 48px;
   }
   #es-rc #es-rc-content .es-cross__item {
     flex: 1 1 0;

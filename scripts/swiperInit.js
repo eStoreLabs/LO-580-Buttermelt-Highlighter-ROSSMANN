@@ -3,7 +3,7 @@
     enabled: false, // start disabled for mobile
     slidesPerView: 1,
     loop: true,
-    authoheight: true,
+    authoHeight: true,
     autoplay: true,
     pagination: {
       el: "#es-swiper-pagination",
