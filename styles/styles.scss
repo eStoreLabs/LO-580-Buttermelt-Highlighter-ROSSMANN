@@ -85,6 +85,19 @@ $transition: all 0.3s ease-in-out;
     -webkit-text-fill-color: transparent;
   }
 
+  .es-mobile {
+    display: block;
+    @media (min-width: $media-breakpoint-sm) {
+      display: none;
+    }
+  }
+  .es-desktop {
+    display: none;
+    @media (min-width: $media-breakpoint-sm) {
+      display: block;
+    }
+  }
+
   .es-kv {
     .es-section-title {
       margin-block: 0;

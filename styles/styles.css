@@ -45,6 +45,22 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+#es-rc #es-rc-content .es-mobile {
+  display: block;
+}
+@media (min-width: 576px) {
+  #es-rc #es-rc-content .es-mobile {
+    display: none;
+  }
+}
+#es-rc #es-rc-content .es-desktop {
+  display: none;
+}
+@media (min-width: 576px) {
+  #es-rc #es-rc-content .es-desktop {
+    display: block;
+  }
+}
 #es-rc #es-rc-content .es-kv .es-section-title {
   margin-block: 0;
 }
