@@ -1,6 +1,10 @@
 (() => {
-  if (!document.querySelector("#esColorsSwiper.swiper-initialized")) {
-    const swiper = new Swiper("#esColorsSwiper", {
+  if (
+    !document.querySelector(
+      "#es-rc #es-rc-content #esColorsSwiper.swiper-initialized"
+    )
+  ) {
+    const swiper = new Swiper("#es-rc #es-rc-content #esColorsSwiper", {
       enabled: false, // start disabled for mobile
       slidesPerView: 1,
       loop: true,
