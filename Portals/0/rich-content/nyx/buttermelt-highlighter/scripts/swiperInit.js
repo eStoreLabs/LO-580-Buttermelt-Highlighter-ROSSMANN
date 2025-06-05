@@ -14,10 +14,6 @@
         el: "#es-swiper-pagination",
         clickable: true,
       },
-      navigation: {
-        nextEl: "#es-button-next",
-        prevEl: "#es-button-prev",
-      },
       breakpoints: {
         992: {
           enabled: true,
